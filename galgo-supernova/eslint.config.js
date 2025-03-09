@@ -1,12 +1,12 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
-import tseslint from "typescript-eslint";
-import eslintPluginAstro from "eslint-plugin-astro";
+import globals from 'globals'
+import pluginJs from '@eslint/js'
+import tseslint from 'typescript-eslint'
+import eslintPluginAstro from 'eslint-plugin-astro'
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
 	// add more generic rule sets here:
-	{ files: ["**/*.{js,mjs,cjs,ts}"] },
+	{ files: ['**/*.{js,mjs,cjs,ts}'] },
 	{ languageOptions: { globals: globals.browser } },
 	pluginJs.configs.recommended,
 	...tseslint.configs.recommended,
@@ -14,7 +14,7 @@ export default [
 	{
 		rules: {
 			// override/add rules settings here, such as:
-			"astro/no-set-html-directive": "error",
-		},
-	},
-];
+			'astro/no-set-html-directive': 'error'
+		}
+	}
+]
