@@ -1,0 +1,36 @@
+---
+import routes from '@utils/routes'
+import { Image } from 'astro:assets'
+import GalgoSupernovaLogo from '@images/galgo_logo.svg'
+---
+
+<nav class="flex justify-between">
+	<a href="/">
+		<Image
+			src={GalgoSupernovaLogo}
+			alt="El logo de Galgo supernova que dice galgo super nova en imprenta manuscrita. De fondo, un círculo de color amarillo brillante"
+			class="size-28"
+		/>
+	</a>
+
+	<ul class="flex space-x-4">
+		<!-- <li>qué?</li>
+		<li>quiénes?</li>
+		<li>cómo?</li>
+		<li>dónde y cuándo?</li>
+		<li>hola!</li> -->
+		<li><a href={routes.que['que-es-galgo']}>¿Qué es Galgo?</a></li>
+		<li>
+			<a href={routes.que['que-hacemos'].bicicardumen}>Bicicardumen</a>
+		</li>
+		<li>
+			<a href={routes.que['que-hacemos'].fanzines}>Fanzines</a>
+		</li>
+		<li>
+			<a href={routes.que['que-hacemos'].talleres}>Talleres</a>
+		</li>
+		<li>
+			<a href={routes.como['mecanica-comunitaria']}>Mecánica Comunitaria</a>
+		</li>
+	</ul>
+</nav>
